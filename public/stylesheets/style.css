@@ -1,8 +1,70 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*  {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-a {
-  color: #00B7FF;
+@font-face {
+  font-family: "axiforma-bold";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "axiforma-normal";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Regular.otf") format("opentype");
+}
+body {
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+}
+header {
+  background-color: #18181B;
+  min-height: 100vh;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 3rem;
+}
+img {
+  width: 100%;
+}
+header > figure {
+  align-self: stretch;
+}
+article {
+  width: 218px;
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 0.3rem; */
+}
+article > h1 {
+  font-size: 2rem;
+  font-family: "axiforma-bold";
+}
+article > p {
+  font-size: 1rem;
+  text-align: center;
+  text-wrap: pretty;
+  font-family: "axiforma-normal";
+}
+button.btn {
+  background-color: transparent;
+  width: 211px;
+  height: 42px;
+  color: inherit;
+  border-radius: 20px;
+  background-image: url("../images/Rectangle 2.png"), url("../images/Rectangle 1.png");
+  border: none;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: "axiforma-bold";
+  font-size: 1rem;
+  /* display: block; */
+  /* margin: 0 auto; */
+}
+button.btn:active {
+  transform: scale(0.9);
 }
