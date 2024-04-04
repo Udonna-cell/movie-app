@@ -1,0 +1,222 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+@font-face {
+  font-family: "axiforma-bold";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Bold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "axiforma-normal";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "axiforma-light";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "axiforma-thin";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Thin.otf")
+    format("opentype");
+}
+body {
+  background-color: #18181b;
+  color: #ffffff;
+  padding: 50px 1.5rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+nav > section.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+h1.message {
+  width: 119px;
+  font-size: 1.02rem;
+  line-height: 2rem;
+  /* font-weight: 300; */
+  font-family: "axiforma-thin";
+  /* background-color: orange; */
+}
+h1.message > span {
+  font-family: "axiforma-bold";
+  font-size: 1.5rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+main > section > h2 {
+  font-size: medium;
+  font-family: "axiforma-thin";
+}
+img {
+  width: 100%;
+}
+section.release > section {
+  height: 187px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.release div.movie {
+  max-width: 342px;
+  max-height: 187px;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0.5rem;
+}
+section.release div.movie::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(transparent 42%, #000);
+}
+section.release div.movie > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  color: #848484;
+}
+section.release .info {
+  width: 98px;
+  height: 52px;
+}
+section.release .info h1 {
+  font-size: 24px;
+  font-family: "axiforma-bold";
+  line-height: 1.5rem;
+  color: #ffffff;
+}
+section.release .info p {
+  font-size: 12px;
+  font-family: "axiforma-normal";
+}
+section.release .rate {
+  width: 80px;
+  font-family: "axiforma-normal";
+  font-size: 10px;
+}
+section.watching > section {
+  overflow: scroll;
+  /* scrollbar-width: none; */
+  margin-top: 0.5rem;
+}
+section.watching .container {
+  width: 518px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+section.watching .watching {
+  width: 162px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+section.watching .watching figure {
+  position: relative;
+}
+section.watching .watching figure .progress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  /* padding: 1px; */
+}
+section.watching .watching figure .progress .bar {
+  width: 65%;
+  padding: 1px;
+  background-color: #ca1636;
+}
+section.watching .watching > article h4 {
+  font-family: "axiforma-bold";
+  font-size: 12px;
+}
+section.watching .watching > article p {
+  font-size: 12px;
+  font-family: "axiforma-normal";
+  color: #868686;
+}
+section.picks menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+section.picks menu li {
+    font-size: 14px;
+    font-family: "axiforma-normal";
+    color: #575757;
+}
+section.picks menu li.active {
+    font-family: "axiforma-bold";
+    color: #ffffff;
+    position: relative;
+}
+section.picks menu li.active::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    /* padding: 1px; */
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: -15%;
+}
+section.picks > section {
+    overflow: scroll;
+    /* scrollbar-width: none; */
+    margin-top: 1rem;
+}
+section.picks > section .container {
+    width: 404px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+section.picks .item {
+    width: 124px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "axiforma-normal";
+    font-size: 12px;
+    /* height: 124px; */
+}
+section.picks .item > figure img {
+    border-radius: 24px;
+}
+section.picks .item h4 {
+    color: #E8E8E8;
+}
+section.picks .item h4 span {
+    color: #828282;
+}

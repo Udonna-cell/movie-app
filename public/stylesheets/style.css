@@ -68,3 +68,7 @@ button.btn {
 button.btn:active {
   transform: scale(0.9);
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}

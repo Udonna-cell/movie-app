@@ -1,0 +1,88 @@
+extends layout
+block style
+    link(rel='stylesheet', href='/stylesheets/home.css')
+block content
+    nav 
+        section.profile
+            .profile 
+                img(src="images/Ellipse 3.png", alt="profile")
+            h1.message 
+                | Welcome back 
+                br 
+                span Maria
+        .menu 
+            img(src="images/Group 10.png", alt="Group 10")
+    
+    main 
+        section.release
+            h2 New release
+            section.movie-box
+                div.movie
+                    img(src="images/movie.png", alt="movies")
+                    div.detail
+                        .info 
+                            h1 Morbius
+                            p  Marvel Studios
+                        .rate 
+                            img(src="images/Group 12.svg", alt="full rate")
+                            p From 342 users
+
+        section.watching 
+            h2 Continue Watching.
+            section 
+                .container 
+                    .watching 
+                        figure 
+                            img(src="images/Rectangle 6.png", alt="continue watching")
+                            .progress 
+                                .bar 
+                        article 
+                            h4 Grappler Baki 
+                            p T.1 Episode 4
+                    .watching 
+                        figure 
+                            img(src="images/Rectangle.png", alt="continue watching")
+                            .progress 
+                                .bar 
+                        article 
+                            h4 Boku no Hero 
+                            p T.3 Episode 10
+                    .watching 
+                        figure 
+                            img(src="images/Rectangle 6.png", alt="continue watching")
+                            .progress 
+                                .bar 
+                        article 
+                            h4 Grappler Baki 
+                            p T.1 Episode 4
+
+        section.picks 
+            menu 
+                ul
+                    li.active For you
+                    li Popular
+                    li Popular
+                    li Popular
+            section 
+                .container 
+                    .item 
+                        figure 
+                            img(src="images/Rectangle 33.png", alt="Rectangle")
+                        h4 Secret Wars 
+                            br 
+                            span 2022
+                    .item 
+                        figure 
+                            img(src="images/Rectangle 34.png", alt="Rectangle")
+                        h4 Secret Wars 
+                            br 
+                            span 2022
+                    .item 
+                        figure 
+                            img(src="images/Rectangle 33.png", alt="Rectangle")
+                        h4 Secret Wars 
+                            br 
+                            span 2022
+
+
+
