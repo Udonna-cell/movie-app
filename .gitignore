@@ -1,1 +1,9 @@
 node_modules/
+# app.js
+# bin/
+# package.json
+package-lock.json
+public/movies
+# routes/
+# start.sh
+# views/

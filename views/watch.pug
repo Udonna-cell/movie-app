@@ -1,0 +1,24 @@
+extends layout 
+block style
+    link(rel='stylesheet', href='/stylesheets/watch.css')
+
+    link(href="video-js.css", rel="stylesheet")
+    script(src="video.js")
+block content
+    header
+        .label 
+            h1 Sonic movie 3 oh brother
+        video#my-video.video-js(controls, preload="auto", width="640", height="264", data-setup="{}")
+            source(src="movies/acan.mkv", type="video/x-matroska")
+            source(src="movies/acan.mkv", type="video/mp4")
+        section.controls 
+            .volume 
+                .icon 
+                    img(src="images/volume.svg", alt="volume icon")
+                input(type="range", name="volume")
+
+
+
+
+
+            
