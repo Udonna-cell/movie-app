@@ -1,1 +1,1 @@
-DEBUG=movie-app:* npm start
+DEBUG=movie-app:* nodemon ./bin/www || DEBUG=movie-app:* npm start

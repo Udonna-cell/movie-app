@@ -1,30 +1,32 @@
 extends layout
-block style
+append style
     link(rel='stylesheet', href='/stylesheets/home.css')
+    link(rel='stylesheet', href='/stylesheets/loader.css')
 block content
+    include loader.html
     nav 
         section.profile
             .profile 
-                img(src="images/Ellipse 3.png", alt="profile")
+                img(src= profile.profile, alt="profile")
             h1.message 
                 | Welcome back 
                 br 
-                span Maria
+                span= profile.Name
         .menu 
-            img(src="images/Group 10.png", alt="Group 10")
+            img(src="/images/Group 10.png", alt="Group 10")
     
     main 
         section.release
             h2 New release
             section.movie-box
-                div.movie
-                    img(src="images/movie.png", alt="movies")
+                div.movie.watch(data= movie.title)
+                    img(src= movie.poster, alt= movie.title)
                     div.detail
                         .info 
-                            h1 Morbius
-                            p  Marvel Studios
+                            h1= movie.title
+                            p= movie.studio
                         .rate 
-                            img(src="images/Group 12.svg", alt="full rate")
+                            img(src="/images/Group 12.svg", alt="full rate")
                             p From 342 users
 
         section.watching 
@@ -33,7 +35,7 @@ block content
                 .container 
                     .watching 
                         figure 
-                            img(src="images/Rectangle 6.png", alt="continue watching")
+                            img(src="/images/Rectangle 6.png", alt="continue watching")
                             .progress 
                                 .bar 
                         article 
@@ -41,7 +43,7 @@ block content
                             p T.1 Episode 4
                     .watching 
                         figure 
-                            img(src="images/Rectangle.png", alt="continue watching")
+                            img(src="/images/Rectangle.png", alt="continue watching")
                             .progress 
                                 .bar 
                         article 
@@ -49,7 +51,7 @@ block content
                             p T.3 Episode 10
                     .watching 
                         figure 
-                            img(src="images/Rectangle 6.png", alt="continue watching")
+                            img(src="/images/Rectangle 6.png", alt="continue watching")
                             .progress 
                                 .bar 
                         article 
@@ -65,24 +67,16 @@ block content
                     li Popular
             section 
                 .container 
-                    .item 
+                  each movie in movies
+                    .item.watch(data= movie.title) 
                         figure 
-                            img(src="images/Rectangle 33.png", alt="Rectangle")
-                        h4 Secret Wars 
+                            img(src= movie.poster, alt= movie.title)
+                        h4= movie.title
                             br 
-                            span 2022
-                    .item 
-                        figure 
-                            img(src="images/Rectangle 34.png", alt="Rectangle")
-                        h4 Secret Wars 
-                            br 
-                            span 2022
-                    .item 
-                        figure 
-                            img(src="images/Rectangle 33.png", alt="Rectangle")
-                        h4 Secret Wars 
-                            br 
-                            span 2022
+                            span= movie.year
 
 
 
+block script
+  script(src="/script/home.js")
+  script(src="/script/loader.js")

@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "axiforma-bold";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Bold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "axiforma-normal";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "axiforma-light";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "axiforma-thin";
+  src: url("../fonts/axiforma/Kastelov\ \ Axiforma\ Thin.otf")
+    format("opentype");
+}
+
+:root {
+  --bg: #1A1A1D;
+  --hover: rgba(34,44,62,0.3);
+  --Headings: #E4E8EE;
+  --paragraph: #B4BABF;
+  --btn-primary: #465A70;
+  --sector: #587088;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  padding: 1rem;
+  color: var(--paragraph);
+  position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--Headings);
+}
+img {
+  width: 100%;
+}
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  display: block;
+  text-transform: capitalize;
+  font-family: "axiforma-bold";
+  color: var(--paragraph);
+  width: 80%;
+  height: 50px;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+}
+button.btn:active {
+  background-color: var(--hover);
+}
+button:active {
+  transform: scale(0.9);
+}
+button.btn-primary {
+  background-color: var(--btn-primary);
+  font-family: "axiforma-bold";
+  color: var(--Headings);
+  border-radius: 0.5rem;
+}
+button.btn-primary.border {
+  position: relative;
+}
+button.btn-primary.border::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--btn-primary);
+  left: 2.5%;
+  top: 20%;
+  border-radius: 0.5rem;
+}

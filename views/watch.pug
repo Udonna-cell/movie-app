@@ -1,24 +1,36 @@
 extends layout 
-block style
+append style
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, orientation=landscape')
+
     link(rel='stylesheet', href='/stylesheets/watch.css')
+    link(rel='stylesheet', href='/stylesheets/loader.css')
 
-    link(href="video-js.css", rel="stylesheet")
-    script(src="video.js")
+    script(src="file:///android_asset/app.js")
+
+    links(href="/video-js.css", rel="stylesheet")
+    script(src="/video.js")
 block content
+    include loader.html
     header
-        .label 
-            h1 Sonic movie 3 oh brother
-        video#my-video.video-js(controls, preload="auto", width="640", height="264", data-setup="{}")
-            source(src="movies/acan.mkv", type="video/x-matroska")
-            source(src="movies/acan.mkv", type="video/mp4")
-        section.controls 
-            .volume 
-                .icon 
-                    img(src="images/volume.svg", alt="volume icon")
-                input(type="range", name="volume")
+      video#my-video(autoplay, data= movie.source)
+        source(src= movie.source, type="video/x-matroska")
+        source(src= movie.source, type="video/mp4")
+      section.controls
+        .container
+          button.copy-link
+            img(src="/images/link_FILL0_wght400_GRAD0_opsz48.svg" alt="link-copy")
+          button.play
+            img(src="/images/play_circle_FILL0_wght400_GRAD0_opsz24.svg" alt="play-pause")
+          button.forward
+            img(src="/images/fast_forward_FILL0_wght400_GRAD0_opsz24.svg", alt="forward")
+          button.backward
+            img(src="/images/fast_rewind_FILL0_wght400_GRAD0_opsz24.svg" alt="fast_rewind")
 
-
-
-
-
-            
+          div.volume
+            div.wrapper
+              input(type="range" name="volume" min="0" max="100" value="50")
+        
+block script
+  script(src="/video.min.js")
+  script(src="/script/watch.js")
+  script(src="/script/loader.js")

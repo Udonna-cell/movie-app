@@ -1,52 +1,75 @@
 extends layout
 
-block style
-    link(rel='stylesheet', href='/stylesheets/detail.css')
-
+append style
+  link(rel = 'stylesheet', href = '/stylesheets/detail.css')
+  link(rel = 'stylesheet', href = '/stylesheets/loader.css')
 block content
-    header 
-        figure 
-            .display 
-                img(src="images/movie 1.png", alt="")
-            .info 
-                div 
-                    h1 Morbius
-                    p Marvel Studios
-                    p.year 2022
-                div 
-                    div.rating 
-                        img(src="images/Group 12.svg", alt="")
-                    p From 342 users
-        article 
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex...
+  include loader.html
+  header
+    figure
+      .display
+        img(src= movie.poster, alt= movie.title)
+      .info
+        div
+          if (movie.year == year && movie.isSeries)
+            p New. Sesson
+          if (movie.year == year && movie.isPart)
+            p New. Movie Part
+          if (movie.year == year && !movie.isSeries && !movie.isPart)
+            p New. Movie
+          h1= movie.title
+        div
+          each x in [movie.year, movie.genre, movie.studio]
+            div
+              p= x
+  section.rating
+    each rate in rates
+      div
+        p= rate.rate
+        p= rate.title
+  article
+    h2 Plot
+    p= movie.detail
+    section.cast
+      h2 Cast
+      div.container
+        div.wrap
+          if (casts != null)
+            each cast in casts
+              div
+                img(src= cast.profile, alt="cast")
+    if(movie.isSeries)
+      mixin SelectBox(name, options)
+        .select-box
+          .select-box__current(tabindex="1")
+            each option, index in options
+              .select-box__value
+                input.select-box__input(type="radio" id=index value=option.value name=name checked=option.checked)
+                p.select-box__input-text #{option.name}
+            img.select-box__icon(src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true")
+          ul.select-box__list
+            each option, index in options
+              li
+                label.select-box__option(for=index aria-hidden) #{option.name}
+              
+      +SelectBox('seasons', data.seasons)
+      
 
-            section.cast 
-                div.cast-profile
-                    .profile 
-                        img(src="images/Ellipse 3.png", alt="mask off")
-                    div
-                        h3 Maria Espaes
-                        p As Morbius
-                div.cast-profile
-                    .profile 
-                        img(src="images/Ellipse 3.png", alt="mask off")
-                    div
-                        h3 Maria Espaes
-                        p As Morbius
-                div.cast-profile
-                    .profile 
-                        img(src="images/Ellipse 3.png", alt="mask off")
-                    div
-                        h3 Maria Espaes
-                        p As Morbius
-                div.cast-profile
-                    .profile 
-                        img(src="images/Ellipse 3.png", alt="mask off")
-                    div
-                        h3 Maria Espaes
-                        p As Morbius
-        button.btn
-            a(href="/watch") Watch now
+      h2 EPISODES
+      
+      section.container
+        each x, index in data.episodes
+          each y, i in x
+            section.card(data-title= movie.title data-s= index data-e= i)
+              figure
+                img(src= y.poster)
+              article
+                p
+                  small episode #{i+1}
+                h3= y.title
+                p= y.detail
+    button.btn-primary.border(data = movie.title) Watch now
 
-
-
+block script
+  script(src = "/script/detail.js")
+  script(src = "/script/loader.js")

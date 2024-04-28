@@ -1,0 +1,53 @@
+extends layout 
+append style
+  link(rel="stylesheet", href="/stylesheets/profile.css")
+  link(rel="stylesheet", href="/stylesheets/loader.css")
+block content
+  include loader.html
+  header
+    h1 Welcome back
+    p Choose a profile to begin
+  main
+    each x in profile
+      section.profile(data-info= x.Name)
+        .profile
+          img(src=x.profile, alt=x.Name)
+        .info
+          h5= x.Name
+          p= x.Type
+  footer
+    button.btn-primary#add New Profile
+    button.btn Edit Profile
+  section.profiles
+    each x in profiles
+      div(onclick="pick(this)", data= x)
+        img(src=x, alt="profile")
+  section.add-user
+    form
+      div.profile(onclick="profiles()")
+        img(src="/profile/64d2797fb278296b7800a8c6727eef59.jpg", alt="profile pic")
+        input(type="text", name="profile", value="/profile/64d2797fb278296b7800a8c6727eef59.jpg")
+      div.user
+        input(type="text", name="user",placeholder="username" , required)
+      div.type
+        p Type
+        div.display
+          input(type="radio" name="type", value="child", selected)
+          h3#output child
+          div.drop
+            ul
+              each type in ["Child","Adult"]
+                li()= type
+      div
+        h3 Genres
+        p Pick 3 movie genres you will love to watch
+        div.genres
+          each genre in genres
+            div
+              p= genre
+
+      button.btn-primary(type="submits" value="Upload") create profile
+
+block script
+  script(src="/script/profile.js")
+  script(src="/script/loader.js")

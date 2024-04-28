@@ -18,12 +18,142 @@ body {
   color: #FFFFFF;
   font-family: "axiforma-normal";
   font-size: 12px;
+  padding: 0;
 }
+
+
+
+
+
+.select-box {
+  position: relative;
+  display: block;
+  width: max-content;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+
+.select-box__current {
+  position: relative;
+  box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  cursor: pointer;
+  outline: none;
+}
+
+.select-box__current:focus + .select-box__list {
+  opacity: 1;
+  animation-name: none;
+}
+
+.select-box__current:focus + .select-box__list .select-box__option {
+  cursor: pointer;
+}
+
+.select-box__current:focus .select-box__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-box__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  transition: 0.2s ease;
+  z-index: 20;
+}
+
+.select-box__value {
+  display: flex;
+}
+
+.select-box__input {
+  display: none;
+}
+
+.select-box__input:checked + .select-box__input-text {
+  display: block;
+}
+
+.select-box__input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.select-box__list {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  animation-name: HideList;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  z-index: 3;
+}
+
+.select-box__option {
+  display: block;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.select-box__option:hover,
+.select-box__option:focus {
+  color: #546c84;
+  background-color: #fbfbfb;
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 header {
   padding-bottom: 2.5rem;
 }
 img {
   width: 100%;
+}
+figure .display {
+  position: relative;
+  height: 65vh;
+}
+figure .display::after {
+  content: "";
+  width: 100%;
+  height: 35vh;
+  background: linear-gradient(transparent, var(--bg));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+figure .display img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 20%;
 }
 figure .info,
 article {
@@ -33,98 +163,82 @@ figure .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
 }
 figure .info > div:first-child h1 {
   font-family: "axiforma-bold";
-  font-size: 32px;
+  font-size: calc(1rem * 2.5);
   line-height: 2.5rem;
-}
-figure .info > div:first-child p:last-child {
-  position: absolute;
-  top: 10px;
-  left: 139px;
 }
 figure .info > div:first-child p {
   color: #848484;
+  font-size: larger;
 }
 figure .info > div:first-child {
-  width: 130px;
   position: relative;
   /* display: flex; */
   /* flex-direction: column; */
 }
 figure .info > div:last-child {
-  width: 80px;
-  color: #848484;
-  font-size: 10px;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+figure .info > div:last-child div {
+  color: #000;
+  background: lightgray;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.2rem 0.8rem;
 }
 article {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding-top: 0;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+article > h2,
+section.cast h2{
+  font-size: x-large;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 1.5rem;
 }
 article > p{
-  width: 341px;
-  font-size: 14px;
-  color: #848484;
-}
-section.cast {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 10px;
-}
-section.cast > div.cast-profile {
-  width: 171px;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  position: relative;
-  gap: 0.5rem;
-  border-radius: 0 16px 16px 0;
-  border: 1px solid #5E5E5E;
-  border-left: none;
-}
-section.cast > div.cast-profile >  div p {
-  font-size: 10px;
-  font-family: "axiforma-normal";
-}
-section.cast > div.cast-profile >  div h3 {
-  font-size: 12px;
-  font-family: "axiforma-bold";
-}
-section.cast > div.cast-profile >  div {
-  width: 82px;
-}
-section.cast .profile {
-  width: 52px !important;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(#19A1BE, #7D4192);
-  padding: 2px;
-}
-button.btn {
-  background-color: transparent;
-  width: 211px;
-  height: 42px;
-  color: inherit;
-  border-radius: 20px;
-  background-image: url("../images/Rectangle 2.png"), url("../images/Rectangle 1.png");
-  border: none;
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  font-family: "axiforma-bold";
+  width: 100%;
   font-size: 1rem;
-  display: block;
-  margin: 0 auto;
+  color: #848484;
+  text-align: justify;
 }
-button.btn:active {
+div.container {
+  overflow: scroll;
+}
+div.wrap {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  width: max-content;
+}
+div.wrap > div {
+  width: calc(55px * 1.5);
+  height: calc(55px * 1.5);
+}
+div.wrap > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+button {
+  width: 100%;
+}
+button.btn:active,
+div.wrap > div:active,
+section.card:active {
   transform: scale(0.9);
 }
 a {

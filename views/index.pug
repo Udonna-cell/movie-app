@@ -1,11 +1,16 @@
 extends layout
-
+append style
+  link(href="stylesheets/style.css", rel="stylesheet")
+  link(href="stylesheets/loader.css" , rel="stylesheet")
 block content
+  include loader.html
   header 
     figure 
       img(src="images/Group 8.png", alt="Group 8")
     article 
       h1 Onboarding
       p Watch everything you want for free!
-    button.btn 
-      a(href="home") Enter now
+    button.btn-primary Enter now
+block script
+  script(src="/script/loader.js")
+  script(src="script/onboarding.js")

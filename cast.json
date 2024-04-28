@@ -1,0 +1,47 @@
+[
+  {
+    "ID": 23,
+    "casts": [
+      {
+        "ID": 1,
+        "character": "Kora",
+        "profile": null
+      },
+      {
+        "ID": 2,
+        "character": "Kai",
+        "profile": null
+      },
+      {
+        "ID": 3,
+        "character": "Atticus Noble",
+        "profile": null
+      },
+      {
+        "ID": 4,
+        "character": "Gunnar",
+        "profile": null
+      },
+      {
+        "ID": 5,
+        "character": "Sam",
+        "profile": null
+      },
+      {
+        "ID": 6,
+        "character": "Tarak",
+        "profile": null
+      },
+      {
+        "ID": 7,
+        "character": "Harmada",
+        "profile": null
+      },
+      {
+        "ID": 8,
+        "character": "Titus",
+        "profile": null
+      }
+    ]
+  }
+]

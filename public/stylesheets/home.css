@@ -28,6 +28,7 @@ body {
   background-color: #18181b;
   color: #ffffff;
   padding: 50px 1.5rem;
+  padding-top: 1rem;
 }
 nav {
   display: flex;
@@ -41,6 +42,15 @@ nav > section.profile {
   align-items: center;
   gap: 1rem;
 }
+nav > section.profile .profile img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+nav > section.profile .profile {
+  width: 55px;
+  height: 55px;
+}
 h1.message {
   width: 119px;
   font-size: 1.02rem;
@@ -52,6 +62,7 @@ h1.message {
 h1.message > span {
   font-family: "axiforma-bold";
   font-size: 1.5rem;
+  text-transform: capitalize;
 }
 main {
   display: flex;
@@ -67,14 +78,14 @@ img {
   width: 100%;
 }
 section.release > section {
-  height: 187px;
+  /* height: 187px;*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 section.release div.movie {
   max-width: 342px;
-  max-height: 187px;
+  max-height: 250px;
   border-radius: 24px;
   overflow: hidden;
   position: relative;
@@ -194,7 +205,7 @@ section.picks > section {
     margin-top: 1rem;
 }
 section.picks > section .container {
-    width: 404px;
+    width: max-content;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -211,8 +222,14 @@ section.picks .item {
     font-size: 12px;
     /* height: 124px; */
 }
+section.picks .item > figure {
+  height: calc(124px * 1.5);
+}
 section.picks .item > figure img {
-    border-radius: 24px;
+    border-radius: 5px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 section.picks .item h4 {
     color: #E8E8E8;
