@@ -14,7 +14,8 @@ var usersRouter = require("./routes/users");
 const homeRouter = require("./routes/home");
 const detailRouter = require("./routes/detail");
 const watchRouter = require("./routes/watch");
-const profileRouter = require("./routes/profile");
+const { router, profileData } = require("./routes/profile");
+const profileRouter = router
 
 var app = express();
 

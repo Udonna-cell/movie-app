@@ -12,7 +12,7 @@ append style
 block content
     include loader.html
     header
-      video#my-video(autoplay, data= movie.source)
+      video#my-video(autoplay, data= movie.source, data-left= left, data-mi= movie.ID, data-ui= userID)
         source(src= movie.source, type="video/x-matroska")
         source(src= movie.source, type="video/mp4")
       section.controls

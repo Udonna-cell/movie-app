@@ -6,7 +6,7 @@ const usersProfiles = require("../profiles.json");
 const getGenre = require("../utility/getGenre");
 const movies = require("../movies.json")
 
-router.get("/", (req, res, next) => {
+function profileData(req){
   let genres = getGenre(movies)
   let profiles = []
   let fdata = fs.readdirSync(path.resolve(__dirname, "../public/profile"))
@@ -18,7 +18,18 @@ router.get("/", (req, res, next) => {
     path: req.query.profile,
     type: req.query.type,
   };
-  res.render("profile", { profile: usersProfiles, profiles: profiles, genres });
+  return {
+    profile: usersProfiles,
+    profiles: profiles,
+    genres
+  }
+}
+router.get("/", (req, res, next) => {
+  let data = profileData(req)
+  res.render("profile", data);
 });
 
-module.exports = router;
+module.exports = {
+  router,
+  profileData
+};
