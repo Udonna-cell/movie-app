@@ -10,7 +10,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Art of Love.mkv",
-    "poster": "-5805431269243339362_121.jpg"
+    "poster": "-5805431269243339362_121.jpg",
+    "screenshot": "IMG_20240501_165701_932.jpg"
   },
   {
     "ID": 2,
@@ -23,7 +24,8 @@
     "isSeries": false,
     "isPart": true,
     "source": "Eye for an Eye 1.mkv",
-    "poster": "IMG_20240411_155259_337.jpg"
+    "poster": "IMG_20240411_155259_337.jpg",
+    "screenshot": "Screenshot_20240501-170309.png"
   },
   {
     "ID": 3,
@@ -36,7 +38,8 @@
     "year": 2024,
     "isPart": true,
     "poster": "IMG_20240411_155252_140.jpg",
-    "source": "Eye for an Eye 2.mkv"
+    "source": "Eye for an Eye 2.mkv",
+    "screenshot": "Screenshot_20240501-171114.png"
   },
   {
     "ID": 4,
@@ -49,7 +52,8 @@
     "isSeries": false,
     "isPart": true,
     "poster": "-5812276197277679395_121.jpg",
-    "source": "Kung Fu Panda 4.mkv"
+    "source": "Kung Fu Panda 4.mkv",
+    "screenshot": "Screenshot_20240501-171827.png"
   },
   {
     "ID": 5,
@@ -62,7 +66,8 @@
     "duration": null,
     "isSeries": false,
     "isPart": false,
-    "source": "The Casagrandes Movie.mkv"
+    "source": "The Casagrandes Movie.mkv",
+    "screenshot": "Screenshot_20240501-172133.png"
   },
   {
     "ID": 6,
@@ -75,7 +80,8 @@
     "isSeries": false,
     "isPart": true,
     "source": "Dune.Mp4",
-    "poster": "-5823281995139105338_121.jpg"
+    "poster": "-5823281995139105338_121.jpg",
+    "screenshot": "Screenshot_20240501-172437.png"
   },
   {
     "ID": 7,
@@ -88,7 +94,8 @@
     "isSeries": false,
     "isPart": true,
     "source": "Dune 2.mkv",
-    "poster": "-5803358505141387737_121.jpg"
+    "poster": "-5803358505141387737_121.jpg",
+    "screenshot": "Screenshot_20240501-172722.png"
   },
   {
     "ID": 8,
@@ -101,7 +108,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Lift.mp4",
-    "poster": "-5839164852919189463_121.jpg"
+    "poster": "-5839164852919189463_121.jpg",
+    "screenshot": "Screenshot_20240501-173012.png"
   },
   {
     "ID": 9,
@@ -114,7 +122,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Leo.mkv",
-    "poster": "-5976810235404337105_120.jpg"
+    "poster": "-5976810235404337105_120.jpg",
+    "screenshot": "Screenshot_20240501-182015.png"
   },
   {
     "ID": 10,
@@ -127,7 +136,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Mavka The Forest Song.mkv",
-    "poster": "-5832697478279969828_121.jpg"
+    "poster": "-5832697478279969828_121.jpg",
+    "screenshot": "Screenshot_20240501-182249.png"
   },
   {
     "ID": 11,
@@ -140,7 +150,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Players.mp4",
-    "poster": "-5938174676704543178_121.jpg"
+    "poster": "-5938174676704543178_121.jpg",
+    "screenshot": "Screenshot_20240501-182429.png"
   },
   {
     "ID": 12,
@@ -153,7 +164,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Rewind.mkv",
-    "poster": "-5769431742426497639_121.jpg"
+    "poster": "-5769431742426497639_121.jpg",
+    "screenshot": "Screenshot_20240501-182611.png"
   },
   {
     "ID": 13,
@@ -166,7 +178,8 @@
     "duration": null,
     "isPart": false,
     "source": "The Tearsmith.mkv",
-    "poster": "-5798766678295822963_121.jpg"
+    "poster": "-5798766678295822963_121.jpg",
+    "screenshot": "Screenshot_20240501-182727.png"
   },
   {
     "ID": 14,
@@ -179,7 +192,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Ne Zha (2019).mp4",
-    "poster": "2334485.jpg"
+    "poster": "2334485.jpg",
+    "screenshot": "Screenshot_20240501-182945.png"
   },
   {
     "ID": 15,
@@ -192,7 +206,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Love at First Sight.mkv",
-    "poster": "-5776267320317034592_121.jpg"
+    "poster": "-5776267320317034592_121.jpg",
+    "screenshot": "Screenshot_20240501-180043.png"
   },
   {
     "ID": 16,
@@ -205,7 +220,8 @@
     "isSeries": false,
     "isPart": true,
     "source": "Tall Girl 2 (2022).mp4",
-    "poster": "-5778475350119004178_121.jpg"
+    "poster": "-5778475350119004178_121.jpg",
+    "screenshot": "Screenshot_20240501-175834.png"
   },
   {
     "ID": 17,
@@ -218,7 +234,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "The Sea Beast (2022) (NetNaija.com).mp4",
-    "poster": "-5800909377350253410_121.jpg"
+    "poster": "-5800909377350253410_121.jpg",
+    "screenshot": "Screenshot_20240501-175621.png"
   },
   {
     "ID": 18,
@@ -231,7 +248,8 @@
     "isSeries": true,
     "isPart": false,
     "poster": "-5800902063020950044_121.jpg",
-    "source": null
+    "source": null,
+    "screenshot": null
   },
   {
     "ID": 19,
@@ -243,7 +261,8 @@
     "duration": null,
     "isSeries": true,
     "isPart": false,
-    "poster": "-6046148131596385660_121.jpg"
+    "poster": "-6046148131596385660_121.jpg",
+    "screenshot": null
   },
   {
     "ID": 20,
@@ -255,7 +274,8 @@
     "duration": null,
     "isSeries": true,
     "isPart": false,
-    "poster": "wp12416848.jpg"
+    "poster": "wp12416848.jpg",
+    "screenshot": null
   },
   {
     "ID": 21,
@@ -267,7 +287,8 @@
     "duration": null,
     "isSeries": true,
     "isPart": false,
-    "poster": "wp12380068.jpg" 
+    "poster": "wp12380068.jpg",
+    "screenshot": null
   },
   {
     "ID": 22,
@@ -279,7 +300,8 @@
     "duration": null,
     "isSeries": true,
     "isPart": false,
-    "poster": "wp12600497.jpg"
+    "poster": "wp12600497.jpg",
+    "screenshot": null
   },
   {
     "ID": 23,
@@ -292,7 +314,8 @@
     "isSeries": false,
     "isPart": true,
     "source": "Rebel Moon - Part One A Child of Fire (2023).mkv",
-    "poster": "-5778138830841429770_121.jpg"
+    "poster": "-5778138830841429770_121.jpg",
+    "screenshot": "Screenshot_20240501-175056.png"
   },
   {
     "ID": 24,
@@ -305,7 +328,8 @@
     "isSeries": false,
     "isPart": true,
     "poster": "-5841705107031442195_121.jpg",
-    "source": "Rebel Moon Part 2 The Scargiver 2024 (480p) (@Jay_tvmedia).mkv"
+    "source": "Rebel Moon Part 2 The Scargiver 2024 (480p) (@Jay_tvmedia).mkv",
+    "screenshot": "Screenshot_20240501-174835.png"
   },
   {
     "ID": 25,
@@ -318,7 +342,8 @@
     "isSeries": false,
     "isPart": true,
     "poster": "-5852487725507263535_121.jpg",
-    "source": "Creed III (2023).mkv"
+    "source": "Creed III (2023).mkv",
+    "screenshot": "Screenshot_20240501-174623.png"
   },
   {
     "ID": 26,
@@ -331,7 +356,8 @@
     "isSeries": false,
     "isPart": false,
     "poster": "-5833662351272948647_121.jpg",
-    "source": "Immaculate (2024) (flames🔥media).mkv"
+    "source": "Immaculate (2024) (flames🔥media).mkv",
+    "screenshot": "Screenshot_20240501-174444.png"
   },
   {
     "ID": 27,
@@ -344,7 +370,8 @@
     "isPart": false,
     "genre": "Horror/Mystery",
     "poster": "-5769431742426497584_121.jpg",
-    "source": "Imaginary (2024) LIMITLESS ENT.mkv"
+    "source": "Imaginary (2024) LIMITLESS ENT.mkv",
+    "screenshot": "Screenshot_20240501-174255.png"
   },
   {
     "ID": 28,
@@ -357,7 +384,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Chhorii (2021).Mp4",
-    "poster": "-5839060815926376804_121.jpg"
+    "poster": "-5839060815926376804_121.jpg",
+    "screenshot": "Screenshot_20240501-174117.png"
   },
   {
     "ID": 29,
@@ -370,7 +398,8 @@
     "isSeries": false,
     "isPart": true,
     "source": "Venom (2021).Mp4",
-    "poster": "IMG_20240422_144638_386.jpg"
+    "poster": "IMG_20240422_144638_386.jpg",
+    "screenshot": "Screenshot_20240501-173846.png"
   },
   {
     "ID": 30,
@@ -383,7 +412,8 @@
     "isSeries": true,
     "isPart": false,
     "source": null,
-    "poster": "-5847316692257059840_121.jpg"
+    "poster": "-5847316692257059840_121.jpg",
+    "screenshot": null
   },
   {
     "ID": 31,
@@ -396,7 +426,8 @@
     "isSeries": false,
     "isPart": false,
     "source": "Talk to Me (2023).mkv",
-    "poster":"-5852828140320178830_120.jpg"
+    "poster":"-5852828140320178830_120.jpg",
+    "screenshot": "Screenshot_20240501-173655.png"
   },
   {
     "ID": 32,
@@ -409,7 +440,8 @@
     "isSeries": true,
     "isPart": false,
     "source": null,
-    "poster": "-5863779276132827398_121.jpg"
+    "poster": "-5863779276132827398_121.jpg",
+    "screenshot": null
   },
   {
     "ID": 33,
@@ -422,6 +454,7 @@
     "isSeries": false,
     "isPart": false,
     "source": "Alita Battle Angel (2019)(MoviesPlug).mp4",
-    "poster": "Alita Battle Angel.webp"
+    "poster": "Alita Battle Angel.webp",
+    "screenshot": "Screenshot_20240501-173324.png"
   }
 ]

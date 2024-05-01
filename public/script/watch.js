@@ -10,10 +10,10 @@ let movieStream = `http://${window.location.host}${streamExtension}`.replace(/["
 alert(movieStream)
 
 forward.addEventListener("click", ()=>{
-    video.currentTime += (45 / 60) 
+    video.currentTime += 10 
 })
 backward.addEventListener("click",()=>{
-  video.currentTime -= (45 / 60)
+  video.currentTime -= 10
 })
 volume.addEventListener("input", ()=>{
   let value = parseInt(volume.value)
