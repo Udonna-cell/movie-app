@@ -1,0 +1,7 @@
+[
+  { "movieID": "3", "userID": "2", "left": 33.701877, "total": 5400.278 },
+  { "movieID": "26", "userID": "2", "left": 13.331662, "total": 5338.261 },
+  { "movieID": "24", "userID": "2", "left": 34.081808, "total": 7434.723 },
+  { "movieID": "23", "userID": "2", "left": 9.003085, "total": 8158.604 },
+  { "movieID": "4", "userID": "2", "left": 30.432024, "total": 5713.896 }
+]

@@ -7,7 +7,42 @@ let copyLink = document.querySelector("button.copy-link")
 let streamExtension = video.getAttribute("data")
 let movieStream = `http://${window.location.host}${streamExtension}`.replace(/[" "]/g,"%20")
 
-alert(movieStream)
+//alert(window.location.href)
+
+video.addEventListener("timeupdate",()=>{
+  
+
+
+  // Define the data to be sent in the request
+const postData = {
+  movieID: video.getAttribute("data-mi"),
+  userID: video.getAttribute("data-ui"),
+  left: video.currentTime,
+  total: video.duration
+};
+
+// Make a POST request using fetch
+fetch(`${window.location.href}`, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(postData)
+})
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Error in POST request');
+    }
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+})
 
 forward.addEventListener("click", ()=>{
     video.currentTime += 10 
@@ -28,6 +63,12 @@ video.addEventListener("click",()=>{
 })
 window.addEventListener("orientationchange", function() {
 });
+
+video.addEventListener("loadedmetadata",()=>{
+  let left =  parseInt(video.getAttribute("data-left"))
+  video.currentTime += left
+  alert(left)
+})
 
 document.querySelector(".play").addEventListener("click",()=>{
   let icon = document.querySelector("section.controls > .container .play img")
