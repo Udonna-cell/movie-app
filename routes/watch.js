@@ -43,64 +43,61 @@ router.get("/:title", (req, res, next) => {
   }
 });
 
+const watchFilePath = path.resolve(__dirname, '../watch.json');
+
 router.post("/:title", (req, res, next) => {
+  // Check if objects are equal
   function areObjectsEqual(obj1, obj2) {
-    let o1 = parseInt(obj1.movieID);
-    let o2 = parseInt(obj2.movieID);
-    let m2 = parseInt(obj2.userID);
-    let m1 = parseInt(obj1.userID);
-
-    //console.log(`\n`,m1,m2,`\n`)
-
-    if (o1 !== o2 || m1 !== m2) {
-      return false;
-    } else {
-      return true;
-    }
+    return obj1.movieID === obj2.movieID && obj1.userID === obj2.userID;
   }
-  let watch = fs
-    .readFileSync(path.resolve(__dirname, "../watch.json"))
-    .toString();
-  watch = JSON.parse(watch);
+
+  // Read and parse watch data from file
+  let watch = [];
+  try {
+    const watchData = fs.readFileSync(watchFilePath).toString();
+    watch = JSON.parse(watchData);
+  } catch (error) {
+    console.error("Error reading watch data:", error);
+  }
+
+  // Check if object is unique based on movieID and userID
+  function isUnique(w, index, array) {
+    return array.findIndex(item => item.movieID === w.movieID && item.userID === w.userID) === index;
+  }
+
+  // Filter out duplicates
+  watch = watch.filter(isUnique);
+
   let data = req.body;
-  let wd = watch;
-  let isNew = false;
-  for (let i = 0; i < wd.length; i++) {
-    let equal = areObjectsEqual(wd[i], data);
-    //console.log(equal,"<<<<>>>>>")
-    if (!equal) {
-      isNew = true;
+  let isNew = true;
+
+  // Check if data is new or needs updating
+  for (let i = 0; i < watch.length; i++) {
+    if (areObjectsEqual(watch[i], data)) {
+      isNew = false;
+      break;
     }
   }
-  //console.log(data, wd)
-  console.log(isNew, "<<new");
-  if (wd.length == 0 || isNew) {
-    wd.push(data);
-    isNew = false;
+
+  if (isNew) {
+    watch.push(data);
   } else {
-    wd = wd.map((d) => {
-      if (d.movieID == data.movieID && d.userID == data.userID) {
+    watch = watch.map((d) => {
+      if (d.movieID === data.movieID && d.userID === data.userID) {
         return data;
       } else {
         return d;
       }
     });
   }
-  console.log(wd);
 
+  // Write updated watch data to file
   function writeFile() {
     try {
-      fs.writeFile(
-        path.resolve(__dirname, "../watch.json"),
-        JSON.stringify(wd),
-        (er) => {
-          if (er) throw er;
-          console.log("done");
-        },
-      );
+      fs.writeFileSync(watchFilePath, JSON.stringify(watch));
       console.log("File has been written successfully");
     } catch (err) {
-      console.error(err);
+      console.error("Error writing file:", err);
     }
   }
 
