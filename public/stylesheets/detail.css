@@ -14,22 +14,19 @@
     format("opentype");
 }
 body {
-  background-color: #1A1A1D;
-  color: #FFFFFF;
+  background-color: #1a1a1d;
+  color: #ffffff;
   font-family: "axiforma-normal";
   font-size: 12px;
   padding: 0;
 }
 
-
-
-
-
 .select-box {
   position: relative;
   display: block;
   width: max-content;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial",
+    sans-serif;
   font-size: 18px;
   color: #60666d;
 }
@@ -121,16 +118,6 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 header {
   padding-bottom: 2.5rem;
 }
@@ -202,12 +189,12 @@ article {
   gap: 1rem;
 }
 article > h2,
-section.cast h2{
+section.cast h2 {
   font-size: x-large;
-  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 1.5rem;
 }
-article > p{
+article > p {
   width: 100%;
   font-size: 1rem;
   color: #848484;

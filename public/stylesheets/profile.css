@@ -41,8 +41,8 @@ section.profile:active {
   background-color: var(--hover);
   border-radius: 0.5rem;
 }
-section.profile .profile ,
-section.profile img{
+section.profile .profile,
+section.profile img {
   width: 85px;
   height: 85px;
   border-radius: 50%;

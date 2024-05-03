@@ -1,7 +1,7 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 body {
   padding: 0;
@@ -41,7 +41,7 @@ section.controls > .container button {
 button.play,
 button.forward,
 button.backward,
-div.volume{
+div.volume {
   transform: translate(-50%, -50%);
 }
 button.play {
@@ -57,7 +57,6 @@ button.forward {
   left: calc(100% - 25%);
 }
 
-
 div.volume {
   position: absolute;
   top: 50%;
@@ -68,7 +67,8 @@ div.volume {
   height: 14rem;
   width: 3rem;
 }
-.wrapper::before, .wrapper::after {
+.wrapper::before,
+.wrapper::after {
   display: block;
   position: absolute;
   z-index: 99;
@@ -88,7 +88,7 @@ div.volume {
   bottom: 0;
 }
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   background-color: rgba(255, 255, 255, 0.2);
   position: absolute;
@@ -103,16 +103,21 @@ input[type=range] {
   overflow: hidden;
   cursor: row-resize;
 }
-input[type=range][step] {
+input[type="range"][step] {
   background-color: transparent;
-  background-image: repeating-linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) calc(12.5% - 1px), #05051a 12.5%);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2) calc(12.5% - 1px),
+    #05051a 12.5%
+  );
 }
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 0;
   box-shadow: -20rem 0 0 20rem rgba(255, 255, 255, 0.2);
 }
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   border: none;
   width: 0;
   box-shadow: -20rem 0 0 20rem rgba(255, 255, 255, 0.2);

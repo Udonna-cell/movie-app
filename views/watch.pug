@@ -12,7 +12,7 @@ append style
 block content
     include loader.html
     header
-      video#my-video(autoplay, data= movie.source, data-left= left, data-mi= movie.ID, data-ui= userID)
+      video#my-video(autoplay, data= movie.source, data-left= left, data-mi= movie.ID, data-ui= userID, data-shot= movie.screenshot, data-title= movie.title, data-series= isSeries)
         source(src= movie.source, type="video/x-matroska")
         source(src= movie.source, type="video/mp4")
       section.controls
@@ -20,7 +20,7 @@ block content
           button.copy-link
             img(src="/images/link_FILL0_wght400_GRAD0_opsz48.svg" alt="link-copy")
           button.play
-            img(src="/images/play_circle_FILL0_wght400_GRAD0_opsz24.svg" alt="play-pause")
+            img(src="/images/pause_circle_FILL0_wght400_GRAD0_opsz24.svg" alt="play-pause")
           button.forward
             img(src="/images/fast_forward_FILL0_wght400_GRAD0_opsz24.svg", alt="forward")
           button.backward

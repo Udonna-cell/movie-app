@@ -30,33 +30,20 @@ block content
                             p From 342 users
 
         section.watching 
-            h2 Continue Watching.
-            section 
-                .container 
-                    .watching 
-                        figure 
-                            img(src="/images/Rectangle 6.png", alt="continue watching")
-                            .progress 
-                                .bar 
-                        article 
-                            h4 Grappler Baki 
-                            p T.1 Episode 4
-                    .watching 
-                        figure 
-                            img(src="/images/Rectangle.png", alt="continue watching")
-                            .progress 
-                                .bar 
-                        article 
-                            h4 Boku no Hero 
-                            p T.3 Episode 10
-                    .watching 
-                        figure 
-                            img(src="/images/Rectangle 6.png", alt="continue watching")
-                            .progress 
-                                .bar 
-                        article 
-                            h4 Grappler Baki 
-                            p T.1 Episode 4
+          h2 Continue Watching.
+          if(watchs)
+            section
+              .container
+                each watch in watchs 
+                  .watching
+                    figure 
+                      img(src= watch.shot, alt=watch.shot)
+                      .progress
+                        .bar 
+                    article 
+                      h4= watch.title
+                      if(watch.isSeries)
+                        p T.1 Episode 4
 
         section.picks 
             menu 

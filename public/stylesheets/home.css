@@ -135,13 +135,13 @@ section.watching > section {
   margin-top: 0.5rem;
 }
 section.watching .container {
-  width: 518px;
+  width: max-content;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 section.watching .watching {
-  width: 162px;
+  width: calc(162px * 1.5);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -171,69 +171,69 @@ section.watching .watching > article p {
   color: #868686;
 }
 section.picks menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 section.picks menu li {
-    font-size: 14px;
-    font-family: "axiforma-normal";
-    color: #575757;
+  font-size: 14px;
+  font-family: "axiforma-normal";
+  color: #575757;
 }
 section.picks menu li.active {
-    font-family: "axiforma-bold";
-    color: #ffffff;
-    position: relative;
+  font-family: "axiforma-bold";
+  color: #ffffff;
+  position: relative;
 }
 section.picks menu li.active::before {
-    content: "";
-    width: 5px;
-    height: 5px;
-    /* padding: 1px; */
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: -15%;
+  content: "";
+  width: 5px;
+  height: 5px;
+  /* padding: 1px; */
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: -15%;
 }
 section.picks > section {
-    overflow: scroll;
-    /* scrollbar-width: none; */
-    margin-top: 1rem;
+  overflow: scroll;
+  /* scrollbar-width: none; */
+  margin-top: 1rem;
 }
 section.picks > section .container {
-    width: max-content;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 section.picks .item {
-    width: 124px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: "axiforma-normal";
-    font-size: 12px;
-    /* height: 124px; */
+  width: 124px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "axiforma-normal";
+  font-size: 12px;
+  /* height: 124px; */
 }
 section.picks .item > figure {
   height: calc(124px * 1.5);
 }
 section.picks .item > figure img {
-    border-radius: 5px;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 section.picks .item h4 {
-    color: #E8E8E8;
+  color: #e8e8e8;
 }
 section.picks .item h4 span {
-    color: #828282;
+  color: #828282;
 }

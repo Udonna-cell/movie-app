@@ -12,7 +12,9 @@ router.get("/:title", (req, res, next) => {
   //console.log(profileData)
   req.params.title = req.params.title.split(",");
   let movie = movies.filter((movie) => req.params.title[0] == movie.title)[0];
+  let isSeries = false;
   if (movie.isSeries) {
+    isSeries = true;
     let d = req.params.title;
     movie = series.filter((s) => s.ID == movie.ID)[0].season[parseInt(d[1])][
       parseInt(d[2])
@@ -37,13 +39,13 @@ router.get("/:title", (req, res, next) => {
     console.log(watching, watch);
     let left = watching.left ? watching.left : 0;
     console.log(left);
-    res.render("watch", { movie, left, userID: user.ID });
+    res.render("watch", { movie, left, userID: user.ID, isSeries });
   } else {
     res.render("profile", profileData(req));
   }
 });
 
-const watchFilePath = path.resolve(__dirname, '../watch.json');
+const watchFilePath = path.resolve(__dirname, "../watch.json");
 
 router.post("/:title", (req, res, next) => {
   // Check if objects are equal
@@ -62,7 +64,11 @@ router.post("/:title", (req, res, next) => {
 
   // Check if object is unique based on movieID and userID
   function isUnique(w, index, array) {
-    return array.findIndex(item => item.movieID === w.movieID && item.userID === w.userID) === index;
+    return (
+      array.findIndex(
+        (item) => item.movieID === w.movieID && item.userID === w.userID,
+      ) === index
+    );
   }
 
   // Filter out duplicates

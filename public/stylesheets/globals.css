@@ -25,11 +25,11 @@
 }
 
 :root {
-  --bg: #1A1A1D;
-  --hover: rgba(34,44,62,0.3);
-  --Headings: #E4E8EE;
-  --paragraph: #B4BABF;
-  --btn-primary: #465A70;
+  --bg: #1a1a1d;
+  --hover: rgba(34, 44, 62, 0.3);
+  --Headings: #e4e8ee;
+  --paragraph: #b4babf;
+  --btn-primary: #465a70;
   --sector: #587088;
 }
 body {

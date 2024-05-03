@@ -1,7 +1,1 @@
-[
-  { "movieID": "3", "userID": "2", "left": 33.701877, "total": 5400.278 },
-  { "movieID": "26", "userID": "2", "left": 13.331662, "total": 5338.261 },
-  { "movieID": "24", "userID": "2", "left": 34.081808, "total": 7434.723 },
-  { "movieID": "23", "userID": "2", "left": 9.003085, "total": 8158.604 },
-  { "movieID": "4", "userID": "2", "left": 30.432024, "total": 5713.896 }
-]
+[{"movieID":"24","userID":"2","left":3.00768,"total":7434.723,"shot":"/poster/Screenshot_20240501-174835.png","title":"Rebel Moon – Part Two: The Scargiver","isSeries":null},{"movieID":"4","userID":"2","left":1.702052,"total":1497.539,"shot":null,"title":"Element 4","isSeries":""},{"movieID":"25","userID":"2","left":2177.067286,"total":7010.723,"shot":"/poster/Screenshot_20240501-174623.png","title":"Creed III","isSeries":null},{"movieID":"31","userID":"2","left":261.382527,"total":5692.607,"shot":"/poster/Screenshot_20240501-173655.png","title":"Talk to Me","isSeries":null},{"movieID":"25","userID":"1","left":2.415503,"total":7010.723,"shot":"/poster/Screenshot_20240501-174623.png","title":"Creed III","isSeries":null},{"movieID":"2","userID":"1","left":1435.132517,"total":1435.132517,"shot":null,"title":"The Hero of My Dreams","isSeries":""},{"movieID":"3","userID":"1","left":1331.989764,"total":1440.049,"shot":null,"title":"Episode 3","isSeries":""}]
