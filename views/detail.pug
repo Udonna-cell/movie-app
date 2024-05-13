@@ -68,7 +68,9 @@ block content
                   small episode #{i+1}
                 h3= y.title
                 p= y.detail
-    button.btn-primary.border(data = movie.title) Watch now
+    if(!movie.isSeries)
+      if(movie.source)
+        button.btn-primary.border(data = movie.title) Watch now
 
 block script
   script(src = "/script/detail.js")

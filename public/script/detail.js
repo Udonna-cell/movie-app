@@ -1,11 +1,23 @@
-let watchNowBtn = document.querySelector(".btn-primary.border");
-watchNowBtn.addEventListener("click", () => {
-  window.location.href = `/watch/${watchNowBtn.getAttribute("data")}`;
-});
+document.addEventListener("DOMContentLoaded", function() {
+  let watchNowBtn = document.querySelector(".btn-primary.border");
+  if (watchNowBtn) {
+    watchNowBtn.addEventListener("click", () => {
+      let data = watchNowBtn.getAttribute("data");
+      if (data) {
+        window.location.href = `/watch/${data}`;
+      }
+    });
+  }
 
-let movieEpisode = document.querySelectorAll("section.card");
-movieEpisode.forEach((k, i) => {
-  movieEpisode[i].addEventListener("click", () => {
-    window.location.href = `/watch/${movieEpisode[i].getAttribute("data-title")},${movieEpisode[i].getAttribute("data-s")},${movieEpisode[i].getAttribute("data-e")}`;
+  let movieEpisode = document.querySelectorAll("section.card");
+  movieEpisode.forEach((card) => {
+    card.addEventListener("click", () => {
+      let title = card.getAttribute("data-title");
+      let season = card.getAttribute("data-s");
+      let episode = card.getAttribute("data-e");
+      if (title && season && episode) {
+        window.location.href = `/watch/${title},${season},${episode}`;
+      }
+    });
   });
 });

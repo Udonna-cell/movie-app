@@ -12,11 +12,17 @@ append style
 block content
     include loader.html
     header
-      video#my-video(autoplay, data= movie.source, data-left= left, data-mi= movie.ID, data-ui= userID, data-shot= movie.screenshot, data-title= movie.title, data-series= isSeries)
+      video#my-video(autoplay, data= movie.source, data-left= left, data-mi= movie.ID, data-ui= userID, data-shot= movie.screenshot, data-title= movie.title, data-series= isSeries, data-poster= movie.poster)
         source(src= movie.source, type="video/x-matroska")
         source(src= movie.source, type="video/mp4")
       section.controls
         .container
+          
+          // movies progress bar 
+          section.progress
+            input#progress(type="range", name="progress", value="0")
+            div.progress_bar
+          
           button.copy-link
             img(src="/images/link_FILL0_wght400_GRAD0_opsz48.svg" alt="link-copy")
           button.play

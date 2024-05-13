@@ -38,12 +38,12 @@ block content
                   .watching
                     figure 
                       img(src= watch.shot, alt=watch.shot)
-                      .progress
-                        .bar 
+                      .progress(data-total= watch.total)
+                        .bar(data-left= watch.left) 
                     article 
                       h4= watch.title
                       if(watch.isSeries)
-                        p T.1 Episode 4
+                        p= watch.subtitle
 
         section.picks 
             menu 
