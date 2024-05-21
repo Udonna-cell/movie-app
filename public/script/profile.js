@@ -29,3 +29,14 @@ function pick(e) {
   profile.src = e.getAttribute("data");
   profilesCard.style.display = "none";
 }
+
+function validate(e){
+  let password = document.querySelector("#password").value
+  if (password.length < 6) {
+    // alert("need more")
+    return false
+  } else {
+    // alert('done');
+    return true
+  }
+}

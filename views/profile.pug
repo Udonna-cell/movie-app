@@ -47,7 +47,10 @@ block content
               p= genre
 
       button.btn-primary(type="submits" value="Upload") create profile
-
+  section.password
+    form(onsubmit="return validate()", method="post")
+      div
+        input#password(type="text", name="password" required)
 block script
   script(src="/script/profile.js")
   script(src="/script/loader.js")
